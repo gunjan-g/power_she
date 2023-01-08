@@ -9,7 +9,8 @@
 - The purpose of the app is to empower women physically, mentally and financially.
 
 ## Video
-
+<a href= "https://youtu.be/2wHEOS_IBFE">Video</a>
+    
 ## Salient Features
 
 - Learn and explore with the tutorials available
