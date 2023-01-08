@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:power_she_pre/components/AppBarHome.dart';
 import 'package:power_she_pre/components/AppButton.dart';
 import 'package:power_she_pre/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -53,26 +54,8 @@ class _OrderScreenState extends State<OrderScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: klblue,
-      appBar: AppBar(
-        backgroundColor: kpink,
-        title: Padding(
-          padding: const EdgeInsets.only(right: 0),
-          child: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'images/logo.png',
-                  fit: BoxFit.contain,
-                  height: 32,
-                ),
-                Container(
-                    padding: const EdgeInsets.all(8.0), child: Text('PowerShe'))
-              ],
-            ),
-          ),
-        ),
-      ),
+      appBar: AppBarHome(),
+      bottomNavigationBar: BottomAppBar(),
       body: ModalProgressHUD(
         inAsyncCall: spinner,
         progressIndicator: const CircularProgressIndicator(
@@ -138,19 +121,6 @@ class _OrderScreenState extends State<OrderScreen> {
                                             padding: const EdgeInsets.all(20.0),
                                             child: Row(
                                               children: [
-                                                // ClipRRect(
-                                                //   borderRadius: BorderRadius.circular(8.0),
-                                                //   child: Image.network(
-                                                //     documents[index]['image'],
-                                                //     height: 150.0,
-                                                //     width: 100.0,
-                                                //   ),
-                                                // ),
-                                                // Image(
-                                                //   image: documents[index]['image'],
-                                                //   height: 100,
-                                                //   width: 100,
-                                                // ),
                                                 Container(height: 100,width: 100,
                                                 decoration: BoxDecoration(
                                                   image:DecorationImage(image:NetworkImage(documents[index]['image']),fit: BoxFit.fill)
@@ -186,19 +156,17 @@ class _OrderScreenState extends State<OrderScreen> {
 
                                                             TextButton(
                                                               onPressed: () async{
-                                                                // setState(() {
-                                                                //   spinner = true;
-                                                                // });
+
 
                                                                 final docref = await _firestore.collection("details").doc(documents[index]['sell_id']).get();
                                                                 String email=docref['Email'];
                                                                 String phone=docref['Phone'];
                                                                 print(email+" "+phone);
-                                                                // AlertBox(titleText: "Details of the seller",bodyText: 'Email: '+email+'\n'+"Phone: "+phone,);
+
                                                                 showDialog<void>(
                                                                   context: context,
                                                                   barrierDismissible:
-                                                                  false, // user must tap button!
+                                                                  false,
                                                                   builder: (BuildContext
                                                                   context) {
                                                                     return AlertDialog(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:power_she_pre/components/EndDrawer.dart';
 import 'package:power_she_pre/constants.dart';
+import 'package:power_she_pre/screens/my_products.dart';
 import 'package:power_she_pre/screens/splash.dart';
 import 'package:power_she_pre/screens/store.dart';
 import 'dart:async';
@@ -231,7 +233,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ExpansionTile(
                   title: Text("Business"),
-                  leading: Icon(Icons.videocam), //add icon
+                  leading: Icon(Icons.business_rounded), //add icon
                   //childrenPadding: EdgeInsets.only(left:10), //children padding
                   children: [
                     SizedBox(
@@ -317,7 +319,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ]),
               ExpansionTile(
                   title: Text("Safety"),
-                  leading: Icon(Icons.videocam), //add icon
+                  leading: Icon(Icons.safety_check_rounded), //add icon
                   //childrenPadding: EdgeInsets.only(left:10), //children padding
                   children: [
                     SizedBox(
@@ -400,7 +402,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ]),
               ExpansionTile(
                   title: Text("Health"),
-                  leading: Icon(Icons.videocam), //add icon
+                  leading: Icon(Icons.health_and_safety_rounded ), //add icon
                   //childrenPadding: EdgeInsets.only(left:10), //children padding
                   children: [
                     SizedBox(
@@ -483,7 +485,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ]),
               ExpansionTile(
                   title: Text("Personality"),
-                  leading: Icon(Icons.videocam), //add icon
+                  leading: Icon(Icons.person_rounded), //add icon
                   //childrenPadding: EdgeInsets.only(left:10), //children padding
                   children: [
                     SizedBox(
@@ -569,7 +571,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ]),
               ExpansionTile(
                   title: Text("Parenting"),
-                  leading: Icon(Icons.videocam), //add icon
+                  leading: Icon(Icons.home), //add icon
                   //childrenPadding: EdgeInsets.only(left:10), //children padding
                   children: [
                     SizedBox(
@@ -655,7 +657,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ]),
               ExpansionTile(
                   title: Text("Financial Management"),
-                  leading: Icon(Icons.videocam), //add icon
+                  leading: Icon(Icons.attach_money_rounded), //add icon
                   //childrenPadding: EdgeInsets.only(left:10), //children padding
                   children: [
                     SizedBox(
@@ -741,7 +743,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ]),
               ExpansionTile(
                   title: Text("Women Empowerment"),
-                  leading: Icon(Icons.videocam), //add icon
+                  leading: Icon(Icons.female_rounded), //add icon
                   //childrenPadding: EdgeInsets.only(left:10), //children padding
                   children: [
                     SizedBox(
@@ -828,42 +830,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           )),
         ),
-        endDrawer: SidebarX(
-          controller: SidebarXController(selectedIndex: 0, extended: true),
-          theme: SidebarXTheme(
-            selectedItemDecoration: BoxDecoration(color: kpink),
-            // padding: EdgeInsets.all(20),
-            width: 200,
-            decoration: BoxDecoration(color: klblue),
-            textStyle: TextStyle(
-              fontSize: 20,
-              color: kdblue,
-            ),
-            selectedTextStyle: TextStyle(
-              fontSize: 20,
-              color: kbase,
-            ),
-            selectedIconTheme: IconThemeData(color: kbase),
-            iconTheme: IconThemeData(color: kdblue),
-            selectedItemTextPadding: EdgeInsets.only(left: 20),
-            itemTextPadding: EdgeInsets.only(left: 20),
-          ),
-          items: [
-            SidebarXItem(icon: Icons.home, label: 'Profile', onTap: () {}),
-            SidebarXItem(
-                icon: Icons.search,
-                label: 'My Orders',
-                onTap: () {
-                  Navigator.pushNamed(context, OrderScreen.id);
-                }),
-            SidebarXItem(
-                icon: Icons.add_box, label: 'My Products', onTap: () {}),
-            SidebarXItem(
-                icon: Icons.arrow_back_ios_new_outlined,
-                label: 'Logout',
-                onTap: () {}),
-          ],
-        ),
+        endDrawer: EndDrawer(),
+        // endDrawer: EndDrawer(),//
         bottomNavigationBar: BottomBar());
   }
 

@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:power_she_pre/screens/gender_auth/selfie_upload.dart';
+import 'package:power_she_pre/screens/my_products.dart';
+import 'package:power_she_pre/screens/new_product.dart';
 import 'package:power_she_pre/screens/onboard/onboardScreen.dart';
+import 'package:power_she_pre/screens/map/location.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:power_she_pre/screens/course.dart';
 import 'package:power_she_pre/screens/home_screen.dart';
@@ -15,13 +19,15 @@ import 'package:power_she_pre/screens/store.dart';
 import 'package:power_she_pre/screens/welcome_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:power_she_pre/screens/opr_screen.dart';
-// import 'package:power_she_pre/screens/safety_screen.dart';
 import 'package:power_she_pre/screens/phone_details.dart';
+import 'package:power_she_pre/screens/my_products.dart';
+import 'package:power_she_pre/screens/user_profile.dart';
+import 'package:power_she_pre/screens/safety_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -32,7 +38,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: const SplashScreen(),
       theme: ThemeData(
-        textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
+        textTheme: GoogleFonts.openSansTextTheme(Theme.of(context).textTheme),
       ),
       initialRoute: SplashScreen.id,
       routes: {
@@ -50,6 +56,10 @@ class MyApp extends StatelessWidget {
         OprScreen.id: (context) => const OprScreen(),
         SafetyScreen.id: (context) => const SafetyScreen(),
         PhoneDetails.id: (context) => const PhoneDetails(),
+        MyProducts.id:(context)=>const MyProducts(),
+        NewProduct.id:(context)=>const NewProduct(),
+        UserProfile.id: (context) => const UserProfile(),
+        Location.id: (context) => const Location(),
       },
     );
   }
