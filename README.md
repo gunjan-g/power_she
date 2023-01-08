@@ -1,16 +1,27 @@
-# power_she
+# <center><h1 align="center"> PowerShe  </h1></center>
+### <center><p align="center"><i>A women empowerment app</i></p></center>
 
-A new Flutter project.
+<br> 
 
-## Getting Started
+## Table of Contents
 
-This project is a starting point for a Flutter application.
+1. [About the project](#about-the-project)
+   - [Salient features](#salient-features)
+2. [Technology Stack](#technology-stack)
+3. [Compatibility](#compatibility)
+4. [Tour through the App](#tour-through-the-app)
+  
+5. [Flow of the app](#flow-of-the-app)
+6. [Implementation of Agile Methodology](#implementation-of-agile-methodology)
+7. [Installation](#installation)
+8. [Special Instructions to Work with the App](#special-instructions-to-work-with-the-app)
+9. [Challenges Faced](#challenges-faced)
+10. [Future Scope](#future-scope)
+11. [Support and Contact](#future-scope)
 
-A few resources to get you started if this is your first Flutter project:
+    
+## Support and Contact
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Email to: codeoverc23@gmail.com@gmail.com
+ 
+    
