@@ -1,4 +1,4 @@
-# power_she_pre
+# power_she
 
 A new Flutter project.
 
