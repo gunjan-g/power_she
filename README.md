@@ -51,7 +51,7 @@ git init
 
 Clone this repository:
 ``` 
-git clone https://github.com/Paridhicodes/FindPaws.git
+git clone hhttps://github.com/nancy0119/power_she.git
 ```
 <br>
 
