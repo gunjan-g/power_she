@@ -31,15 +31,13 @@
 ## Compatibility
 
 The flutter application is compatible to run on android smart phones.
-
-
+    
     
 ### How it helped us?
 
 - It made the app development process more efficient and predictable.
 - We worked on functionalities looking at them as smaller units of the larger app due to which the process was easy to handle, flexible and allowed more room to adjust new functionalities.
-
-    
+   
 
 ## Installation
 
@@ -51,7 +49,7 @@ git init
 
 Clone this repository:
 ``` 
-git clone hhttps://github.com/nancy0119/power_she.git
+git clone https://github.com/nancy0119/power_she.git
 ```
 <br>
 
